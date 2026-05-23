@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3ee;
+  color: #222;
+}
+
+.hero {
+  min-height: 90vh;
+  background-image: url("images/top.jpg");
+  background-size: cover;
+  background-position: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 40px 24px;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 520px;
+  position: relative;
+  z-index: 1;
+  margin-top: -80px;
+}
+
+.tag {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #106906;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 16px 0;
+}
+
+.lead {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #106906;
+  color: black;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 60px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.profile-card {
+  display: flex;
+  gap: 24px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.service-list,
+.style-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.style-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card,
+.style-card {
+  background-color: white;
+  padding: 28px 16px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+}
+
+.topics details {
+  background-color: white;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.topics summary {
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+.topics summary::before {
+  content: "+ ";
+}
+
+.topics details[open] summary::before {
+  content: "- ";
+}
+
+.style-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.style-card p {
+  font-size: 20px;
+  margin: 12px 0 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 18px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background-color: #222;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #222;
+  color: white;
+}
+
+footer a {
+  color: #d6b48c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+header {
+  scroll-margin-top: 70px;
+}
+
+.top-site-nav {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #222222ae;
+}
+
+.top-site-nav-id {
+  color: wheat;
+  text-decoration: none;
+
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: rgba(34, 34, 34, 0.85);
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+justify-content: space-evenly;
+width: 1200px;
+  gap: 0px;
+}
+
+.nav-links a {
+  font-size: 14px;
+}
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .hero {
+
+    min-height: 60vh;
+
+  }
+
+  .lead{
+    text-shadow: 0 1px 3px rgb(255, 255, 255);
+  }
+
+  .profile-card {
+    flex-direction: column;
+  }
+
+  .service-list,
+  .style-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-list{
+    grid-template-columns: 1fr;
+
+  }
+}
